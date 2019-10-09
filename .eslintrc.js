@@ -3,5 +3,5 @@ module.exports = {
   extends: '@react-native-community',
   rules: {
     "comma-dangle": 0
-   }
+  }
 };

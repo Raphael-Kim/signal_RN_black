@@ -41,7 +41,7 @@ function addAnswerCard(newAnswerCard) {
 function init() {
   return async (dispatch, getState) => {
     try {
-      let response = await fetch('http://106.10.58.66:8888/fetchAskCard', {
+      let response = await fetch('', {
         method: 'POST',
         headers: {
           Accept: 'application/json;charset=UTF-8',

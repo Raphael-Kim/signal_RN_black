@@ -16,8 +16,9 @@ class App extends React.Component {
     return (
       <Provider store={store}>
         <PersistGate
-          loading={<View style={{ flex: 1, backgroundColor: 'blue' }} />}
-          persistor={persistor}>
+          loading={<View style={styles.container} />}
+          persistor={persistor}
+        >
           {console.log(store.getState(), '최초 store.getState()')}
           {console.log(
             setTimeout(function() {
@@ -33,3 +34,10 @@ class App extends React.Component {
 }
 
 export default App;
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#ffffff',
+  },
+});

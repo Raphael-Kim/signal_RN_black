@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, StatusBar, StyleSheet } from 'react-native';
-// import LoggedOutNavigation from '../../navigation/LoggedOutNavigation';
-// import LoggedInBottomTabNavigation from '../../navigation/LoggedInBottomTabNavigation';
+import LoggedOutNavigation from '../../navigation/LoggedOutNavigation';
+import LoggedInBottomTabNavigation from '../../navigation/LoggedInBottomTabNavigation';
 
 class RootContainer extends React.Component {
   state = {
@@ -20,10 +20,10 @@ class RootContainer extends React.Component {
         <StatusBar hidden={false} />
         {isLoggedIn ? (
           // Home 화면으로 이동
-          <View style={{ flex: 1, backgroundColor: 'pink' }} />
+          <LoggedInBottomTabNavigation />
         ) : (
           // Login 화면으로 이동
-          <View style={{ flex: 1, backgroundColor: 'yellow' }} />
+          <LoggedOutNavigation />
         )}
       </View>
     );
