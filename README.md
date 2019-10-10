@@ -1,7 +1,7 @@
 # signal_RN_black
 
 1. https://facebook.github.io/react-native/blog/2019/07/03/version-60: Announcing React Native 0.60
-  - 'CocoaPods by Default', 'Native Modules are now Autolinked'부분 읽어보기.
+  a. 'CocoaPods by Default', 'Native Modules are now Autolinked'부분 읽어보기.
 
 2. react-native-kakao-logins
   a. 'node_modules/react-native-kakao-logins/android/src/res/kakao_strings.xml'에서 앱 키를 5a5185a9f524afa53645953650ba090b로 바꾸기
