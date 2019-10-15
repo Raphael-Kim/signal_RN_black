@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import HomeTabScreen from './presenter';
-import { actionCreators as userActions } from '../../redux/modules/user';
+import { actionCreators as userActions } from '../../../redux/modules/user';
 
 const mapStateToProps = (state, ownProps) => {
   console.log('mapStateToProps from HomeTabScreen/index.js');

@@ -1,5 +1,5 @@
 import { createStackNavigator } from 'react-navigation-stack';
-import HomeTabScreen from '../screens/HomeTabScreen';
+import HomeTabScreen from '../screens/Login/HomeTabScreen';
 
 // API: createStackNavigator(RouteConfigs, StackNavigatorConfig);
 const AppNavigator = createStackNavigator(
@@ -19,7 +19,7 @@ const AppNavigator = createStackNavigator(
       headerTitleContainerStyle: {},
       headerRightContainerStyle: {},
     },
-    //headerMode: 'none'
+    headerMode: 'none',
   },
 );
 

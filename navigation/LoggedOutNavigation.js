@@ -3,7 +3,7 @@ import { View, Image } from 'react-native';
 import { createStackNavigator } from 'react-navigation-stack';
 import { createAppContainer } from 'react-navigation';
 
-import LogInScreen from '../screens/LogInScreen';
+import LogInScreen from '../screens/Logout/LogInScreen';
 
 // API: createStackNavigator(RouteConfigs, StackNavigatorConfig);
 const AppNavigator = createStackNavigator(
