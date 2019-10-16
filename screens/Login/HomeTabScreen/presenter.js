@@ -8,11 +8,26 @@ import {
   ScrollView,
 } from 'react-native';
 import styles from './styles';
+import Card from '../../../components/Card(HomeTabScreen)';
 
 class HomeTabScreen extends React.Component {
   state = {
     isFetching: false,
     textOfQuestion: null,
+    cardArray: [
+      {
+        cardNum: 1,
+        hashtag: '#페이스북 #node.js #facebook',
+        title: '페이스북은 node_modules를 어떻게 관리하나요?',
+        answerer: ['박정훈', '임주연'],
+      },
+      {
+        cardNum: 2,
+        hashtag: '#페이스북 #node.js #facebook',
+        title: '페이스북은 node_modules를 어떻게 관리하나요?',
+        answerer: ['박정훈', '임주연'],
+      },
+    ],
   };
 
   render() {
@@ -63,15 +78,9 @@ class HomeTabScreen extends React.Component {
 
           <View style={styles.space} />
 
-          <View style={styles.cardContainer}>
-            <Text style={styles.hashTagText}>#페이스북 #node.js #facebook</Text>
-            <Text style={styles.titleText}>
-              페이스북은 node_modules를 어떻게 관리하나요?
-            </Text>
-          </View>
-          <View style={styles.cardRowContainer}>
-            <Text>박정훈, 임주연 님 외 5명이 댓글을 달았습니다.</Text>
-          </View>
+          {this.state.cardArray.map(data => {
+            return <Card />;
+          })}
 
           <View style={styles.space} />
         </ScrollView>
