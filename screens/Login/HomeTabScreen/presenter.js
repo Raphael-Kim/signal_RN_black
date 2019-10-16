@@ -6,13 +6,13 @@ import {
   TouchableOpacity,
   TextInput,
   ScrollView,
+  Keyboard,
 } from 'react-native';
 import styles from './styles';
 import Card from '../../../components/Card(HomeTabScreen)';
 
 class HomeTabScreen extends React.Component {
   state = {
-    isFetching: false,
     textOfQuestion: null,
     cardArray: [
       {
@@ -63,7 +63,12 @@ class HomeTabScreen extends React.Component {
               <View style={styles.goDetailView}>
                 <Text
                   style={styles.goDetailText}
-                  onPress={() => alert('it works!')}
+                  onPress={() => {
+                    this.props.navigation.navigate('AddQScreen', {
+                      textOfTitle: this.state.textOfQuestion,
+                    });
+                    Keyboard.dismiss();
+                  }}
                 >
                   세부 내용 작성하기
                 </Text>
@@ -79,7 +84,7 @@ class HomeTabScreen extends React.Component {
           <View style={styles.space} />
 
           {this.state.cardArray.map(data => {
-            return <Card />;
+            return <Card key={data.cardNum} />;
           })}
 
           <View style={styles.space} />

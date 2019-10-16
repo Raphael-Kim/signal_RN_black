@@ -13,42 +13,37 @@ export default StyleSheet.create({
     alignItems: 'center',
     // backgroundColor: 'pink',
   },
-  logoBox: {
+  titleBox: {
     width: wp('100%'),
-    height: hp('30%'),
-    alignItems: 'center',
-    justifyContent: 'center',
-    // backgroundColor: 'green',
+    marginTop: hp('5%'),
+    marginBottom: hp('2%'),
+    paddingHorizontal: wp('5%'),
+    // backgroundColor: 'blue',
   },
-  logo: {
-    width: wp('30%'),
-    height: hp('10%'),
-    // backgroundColor: 'pink',
+  textinputOfTitle: {
+    fontSize: 15,
+    fontWeight: 'bold',
+    textAlignVertical: 'top',
+    // backgroundColor: 'blue',
   },
   questionBox: {
     width: wp('100%'),
     height: hp('25%'),
-    // backgroundColor: 'blue',
     borderBottomWidth: 1,
     borderTopWidth: 1,
     borderBottomColor: '#E5E5E5',
     borderTopColor: '#E5E5E5',
-    marginBottom: hp('3%'),
     paddingHorizontal: wp('5%'),
     paddingVertical: hp('1%'),
+    // backgroundColor: 'blue',
+    marginBottom: hp('5%'),
   },
   textinputOfQuestion: {
     flex: 1,
     fontSize: 15,
+    color: 'black',
     textAlignVertical: 'top',
     // backgroundColor: 'blue',
-  },
-  goDetailView: {
-    alignItems: 'center',
-  },
-  goDetailText: {
-    color: '#555555',
-    textDecorationLine: 'underline',
   },
   askButton: {
     width: wp('20%'),
@@ -65,5 +60,31 @@ export default StyleSheet.create({
   //~~~~~~~~~~~~~~~~~~~~~~~~~~~
   space: {
     height: hp('16%'),
+  },
+  //~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  hashtagBox: {
+    width: wp('100%'),
+    paddingHorizontal: wp('5%'),
+    // backgroundColor: 'purple',
+  },
+  hashtagText: {
+    fontSize: 15,
+    color: '#555555',
+  },
+  line: {
+    width: wp('90%'),
+    borderWidth: 0.5,
+    borderColor: '#E5E5E5',
+    marginVertical: hp('2%'),
+  },
+  addImageBox: {
+    width: wp('100%'),
+    paddingHorizontal: wp('5%'),
+    // backgroundColor: 'purple',
+    marginBottom: hp('5%'),
+  },
+  addImageText: {
+    fontSize: 15,
+    color: '#555555',
   },
 });
