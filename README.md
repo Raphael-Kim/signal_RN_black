@@ -18,6 +18,10 @@
     - 'Option: With CocoaPods' 부분 읽어보면 될 듯.
   
 5. eslint  
-  a. vs code extensions에 들어가서 eslint 다운 받을 것.
-  b. vs code extensions에 들어가서 prettier 다운 받을 것.
+  a. vs code extensions에 들어가서 eslint 다운 받을 것.  
+  b. vs code extensions에 들어가서 prettier 다운 받을 것.  
   c. vs code settings에 들어가서 eslint 검색한 후 Auto Fix On Save 체크
+
+6. react-native-image-picker  
+  a. https://github.com/react-native-community/react-native-image-picker/blob/master/docs/Install.md:
+    - 'IOS install' 부분 읽고 따라하면 될 듯.

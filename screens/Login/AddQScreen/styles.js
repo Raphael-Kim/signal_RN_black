@@ -17,13 +17,13 @@ export default StyleSheet.create({
     width: wp('100%'),
     marginTop: hp('5%'),
     marginBottom: hp('2%'),
-    paddingHorizontal: wp('5%'),
     // backgroundColor: 'blue',
   },
   textinputOfTitle: {
     fontSize: 15,
     fontWeight: 'bold',
     textAlignVertical: 'top',
+    paddingHorizontal: wp('5%'),
     // backgroundColor: 'blue',
   },
   questionBox: {
@@ -33,7 +33,6 @@ export default StyleSheet.create({
     borderTopWidth: 1,
     borderBottomColor: '#E5E5E5',
     borderTopColor: '#E5E5E5',
-    paddingHorizontal: wp('5%'),
     paddingVertical: hp('1%'),
     // backgroundColor: 'blue',
     marginBottom: hp('5%'),
@@ -43,6 +42,7 @@ export default StyleSheet.create({
     fontSize: 15,
     color: 'black',
     textAlignVertical: 'top',
+    paddingHorizontal: wp('5%'),
     // backgroundColor: 'blue',
   },
   askButton: {
@@ -64,27 +64,49 @@ export default StyleSheet.create({
   //~~~~~~~~~~~~~~~~~~~~~~~~~~~
   hashtagBox: {
     width: wp('100%'),
-    paddingHorizontal: wp('5%'),
-    // backgroundColor: 'purple',
+    // backgroundColor: 'pink',
   },
   hashtagText: {
     fontSize: 15,
-    color: '#555555',
+    // color: '#555555',
+    paddingHorizontal: wp('5%'),
   },
+  textinputOfHashtag: {
+    // flex: 1,
+    fontSize: 15,
+    color: 'black',
+    textAlignVertical: 'top',
+    paddingHorizontal: wp('5%'),
+    // backgroundColor: 'blue',
+  },
+  //~~~~~~~~~~~~~~~~~~~~~~~~~~~
   line: {
     width: wp('90%'),
-    borderWidth: 0.5,
+    borderBottomWidth: 1,
     borderColor: '#E5E5E5',
-    marginVertical: hp('2%'),
+    marginBottom: hp('2%'),
   },
+  //~~~~~~~~~~~~~~~~~~~~~~~~~~~
   addImageBox: {
     width: wp('100%'),
-    paddingHorizontal: wp('5%'),
-    // backgroundColor: 'purple',
+    // backgroundColor: 'pink',
     marginBottom: hp('5%'),
+    paddingHorizontal: wp('5%'),
   },
   addImageText: {
     fontSize: 15,
-    color: '#555555',
+    // color: '#555555',
+    marginBottom: hp('2%'),
+  },
+  uploadImageBox: {
+    width: wp('30%'),
+    height: wp('30%'),
+    borderWidth: 1,
+    borderColor: '#E5E5E5',
+    // backgroundColor: 'pink',
+  },
+  uploadImage: {
+    width: wp('30%'),
+    height: wp('30%'),
   },
 });
