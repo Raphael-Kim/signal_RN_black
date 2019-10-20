@@ -32,9 +32,11 @@
     - 장점: 이미지 복수 선택, 자르기(crop) 기능.
 
 > 7. AddQScreen에서 image를 가져온 후 aws(서버)와 연동하기.  
+    => 왠만하면 함수는 render 밖으로 빼자 뷰 보기가 힘들기도 하고, fetch 넣으면 노답 될 듯
 
 > 8. AddQScreen에서 text를 서버 DB와 연동하기.  
-  a. 작성된 코드 참고하기(해시 태그 구현: text를 space단위로 쪼개놓음)  
+  a. 작성된 코드 참고하기(해시 태그 구현: text를 space단위로 쪼개놓음) 
+    => state에 hashtag 5개 만들어두고 space로 쪼갠걸 각 state에 넣어두는 건 어떨지
   b. 질문/제목/해시태그(개수만큼)/을 구분해서 저장할 것!  
   
 > 9. AddQScreen에서 불러운 Image를 클릭했을 때, (이미지에 대한)설명을 달 수 있도록 모달 제작.
