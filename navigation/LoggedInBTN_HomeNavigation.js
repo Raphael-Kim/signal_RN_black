@@ -4,6 +4,7 @@ import { StyleSheet } from 'react-native';
 import { createStackNavigator } from 'react-navigation-stack';
 import HomeTabScreen from '../screens/Login/HomeTabScreen';
 import AddQScreen from '../screens/Login/AddQScreen';
+import QScreen from '../screens/Login/QScreen';
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
@@ -21,6 +22,19 @@ const AppNavigator = createStackNavigator(
     },
     AddQScreen: {
       screen: AddQScreen,
+      navigationOptions: () => ({
+        headerTintColor: '#3C7DFC',
+        headerTitle: () => (
+          <Image
+            style={styles.container}
+            resizeMode={'contain'}
+            source={require('../assets/images/logo(x4).png')}
+          />
+        ),
+      }),
+    },
+    QScreen: {
+      screen: QScreen,
       navigationOptions: () => ({
         headerTintColor: '#3C7DFC',
         headerTitle: () => (
@@ -52,7 +66,7 @@ const styles = StyleSheet.create({
   container: {
     width: wp('21%'),
     height: hp('5%'),
-    marginTop: hp('0.6%'),
+    marginTop: hp('0.8%'),
     // backgroundColor: 'pink',
   },
 });

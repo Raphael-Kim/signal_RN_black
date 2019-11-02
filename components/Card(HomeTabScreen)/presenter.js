@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 import styles from './styles';
+import { withNavigation } from 'react-navigation';
 
 class HomeTabScreen extends React.Component {
   state = {
@@ -10,7 +11,11 @@ class HomeTabScreen extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <TouchableOpacity onPress={() => alert('it works')}>
+        <TouchableOpacity
+          onPress={() => {
+            this.props.navigation.navigate('QScreen');
+          }}
+        >
           <View style={styles.cardContainer}>
             <Text style={styles.hashTagText}>#페이스북 #node.js #facebook</Text>
             <Text style={styles.titleText}>
@@ -26,4 +31,4 @@ class HomeTabScreen extends React.Component {
   }
 }
 
-export default HomeTabScreen;
+export default withNavigation(HomeTabScreen);
