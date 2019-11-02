@@ -68,6 +68,7 @@ class HomeTabScreen extends React.Component {
                       textOfTitle: this.state.textOfQuestion,
                     });
                     Keyboard.dismiss();
+                    this.setState({ textOfQuestion: null });
                   }}
                 >
                   세부 내용 작성하기

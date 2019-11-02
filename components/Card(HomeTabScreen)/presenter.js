@@ -3,7 +3,7 @@ import { View, Text, TouchableOpacity } from 'react-native';
 import styles from './styles';
 import { withNavigation } from 'react-navigation';
 
-class HomeTabScreen extends React.Component {
+class Card extends React.Component {
   state = {
     isReady: true,
   };
@@ -31,4 +31,4 @@ class HomeTabScreen extends React.Component {
   }
 }
 
-export default withNavigation(HomeTabScreen);
+export default withNavigation(Card);

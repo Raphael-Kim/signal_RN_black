@@ -85,7 +85,8 @@ class AddQScreen extends React.Component {
     return (
       <View style={styles.container}>
         <ScrollView
-          // keyboardShouldPersistTaps={'handled'}
+          keyboardShouldPersistTaps={'handled'}
+          // 키보드가 show인 상태에서 버튼 클릭 시, dismiss되는 것이 아니라 버튼이 작동 되도록
           contentContainerStyle={styles.scrollContainer}
         >
           <View style={styles.titleBox}>

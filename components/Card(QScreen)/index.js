@@ -3,7 +3,7 @@ import Card from './presenter';
 import { actionCreators as userActions } from '../../redux/modules/user';
 
 const mapStateToProps = (state, ownProps) => {
-  console.log('mapStateToProps from Card(HomeTabScreen)/index.js');
+  console.log('mapStateToProps from Card(QScreen)/index.js');
 
   return {};
 };
