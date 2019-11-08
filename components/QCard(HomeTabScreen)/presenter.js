@@ -13,7 +13,9 @@ class Card extends React.Component {
       <View style={styles.container}>
         <TouchableOpacity
           onPress={() => {
-            this.props.navigation.navigate('QScreen');
+            this.props.navigation.navigate('QScreen', {
+              textOfTitle: '페이스북은 node_modules를 어떻게 관리하나요?',
+            });
           }}
         >
           <View style={styles.cardContainer}>

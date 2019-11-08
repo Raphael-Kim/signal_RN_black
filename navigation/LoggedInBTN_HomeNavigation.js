@@ -5,6 +5,7 @@ import { createStackNavigator } from 'react-navigation-stack';
 import HomeTabScreen from '../screens/Login/HomeTabScreen';
 import AddQScreen from '../screens/Login/AddQScreen';
 import QScreen from '../screens/Login/QScreen';
+import AddAScreen from '../screens/Login/AddAScreen';
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
@@ -35,6 +36,19 @@ const AppNavigator = createStackNavigator(
     },
     QScreen: {
       screen: QScreen,
+      navigationOptions: () => ({
+        headerTintColor: '#3C7DFC',
+        headerTitle: () => (
+          <Image
+            style={styles.container}
+            resizeMode={'contain'}
+            source={require('../assets/images/logo(x4).png')}
+          />
+        ),
+      }),
+    },
+    AddAScreen: {
+      screen: AddAScreen,
       navigationOptions: () => ({
         headerTintColor: '#3C7DFC',
         headerTitle: () => (

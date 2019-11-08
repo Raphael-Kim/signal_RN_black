@@ -9,7 +9,7 @@ import {
   Keyboard,
 } from 'react-native';
 import styles from './styles';
-import Card from '../../../components/Card(HomeTabScreen)';
+import QCard from '../../../components/QCard(HomeTabScreen)';
 
 class HomeTabScreen extends React.Component {
   state = {
@@ -46,6 +46,7 @@ class HomeTabScreen extends React.Component {
               source={require('../../../assets/images/logo(x4).png')}
             />
           </View>
+
           <View style={styles.questionBox}>
             <TextInput
               style={styles.textinputOfQuestion}
@@ -76,6 +77,7 @@ class HomeTabScreen extends React.Component {
               </View>
             ) : null}
           </View>
+
           <TouchableOpacity onPress={() => alert('It works')}>
             <View style={styles.askButton}>
               <Text style={styles.askButtonText}>등록</Text>
@@ -85,7 +87,7 @@ class HomeTabScreen extends React.Component {
           <View style={styles.space} />
 
           {this.state.cardArray.map(data => {
-            return <Card key={data.cardNum} />;
+            return <QCard key={data.cardNum} />;
           })}
 
           <View style={styles.space} />

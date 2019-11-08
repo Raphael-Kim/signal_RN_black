@@ -8,7 +8,7 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import styles from './styles';
-import Card from '../../../components/Card(HomeTabScreen)';
+import Card from '../../../components/QCard(HomeTabScreen)';
 
 class ProfileTabScreen extends React.Component {
   state = {
@@ -90,7 +90,6 @@ class ProfileTabScreen extends React.Component {
           {this.state.cardArray.map(data => {
             return <Card key={data.cardNum} />;
           })}
-
         </ScrollView>
       </View>
     );

@@ -1,24 +1,30 @@
 import React from 'react';
 import { View, Image, ScrollView, Text } from 'react-native';
 import styles from './styles';
-import Card from '../../../components/Card(QScreen)';
+import ACard from '../../../components/ACard(QScreen)';
 
 class QScreen extends React.Component {
   state = {
     moreOn: false,
     QImages: null,
+    titleOfQuestion: null,
   };
 
-  componentDidMount() {}
+  componentDidMount() {
+    this.setState({
+      titleOfQuestion: this.props.navigation.getParam('textOfTitle', null),
+    });
+  }
 
   render() {
     console.log('QScreen/presenter의 render()함수 안입니다.');
+    const { titleOfQuestion } = this.state;
 
     return (
       <View style={styles.container}>
         <ScrollView contentContainerStyle={styles.scrollContainer}>
           <View style={styles.titleBox}>
-            <Text style={styles.titleText}>질문 제목이 들어갈 곳</Text>
+            <Text style={styles.titleText}>{titleOfQuestion}</Text>
           </View>
 
           <View style={styles.hashtagBox}>
@@ -78,7 +84,9 @@ class QScreen extends React.Component {
 
             <Text
               onPress={() => {
-                alert('It works!');
+                this.props.navigation.navigate('AddAScreen', {
+                  titleOfQuestion: this.state.titleOfQuestion,
+                });
               }}
               style={styles.addAText}
             >
@@ -86,10 +94,10 @@ class QScreen extends React.Component {
             </Text>
           </View>
 
-          <Card />
-          <Card />
-          <Card />
-          <Card />
+          <ACard />
+          <ACard />
+          <ACard />
+          <ACard />
         </ScrollView>
       </View>
     );

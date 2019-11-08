@@ -99,14 +99,14 @@ export default StyleSheet.create({
     marginBottom: hp('2%'),
   },
   uploadImageBox: {
-    width: wp('30%'),
-    height: wp('30%'),
+    width: wp('25%'),
+    height: wp('25%'),
     borderWidth: 1,
     borderColor: '#E5E5E5',
     // backgroundColor: 'pink',
   },
   uploadImage: {
-    width: wp('30%'),
-    height: wp('30%'),
+    width: wp('25%'),
+    height: wp('25%'),
   },
 });
