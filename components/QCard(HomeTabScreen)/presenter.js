@@ -1,8 +1,9 @@
 import React from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 import styles from './styles';
+import { withNavigation } from 'react-navigation';
 
-class HomeTabScreen extends React.Component {
+class Card extends React.Component {
   state = {
     isReady: true,
   };
@@ -10,7 +11,13 @@ class HomeTabScreen extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <TouchableOpacity onPress={() => alert('it works')}>
+        <TouchableOpacity
+          onPress={() => {
+            this.props.navigation.navigate('QScreen', {
+              textOfTitle: '페이스북은 node_modules를 어떻게 관리하나요?',
+            });
+          }}
+        >
           <View style={styles.cardContainer}>
             <Text style={styles.hashTagText}>#페이스북 #node.js #facebook</Text>
             <Text style={styles.titleText}>
@@ -26,4 +33,4 @@ class HomeTabScreen extends React.Component {
   }
 }
 
-export default HomeTabScreen;
+export default withNavigation(Card);
