@@ -9,6 +9,20 @@ import {
 } from 'react-native';
 import ImagePicker from 'react-native-image-picker';
 import styles from './styles';
+import Amplify, { Auth, Storage } from 'aws-amplify';
+
+Amplify.configure({
+  Auth: {
+    identityPoolId: 'ap-northeast-2:564bf062-96a0-4239-86db-0bc098d333e3', //REQUIRED - Amazon Cognito Identity Pool ID
+    region: 'ap-northeast-2', // REQUIRED - Amazon Cognito Region
+  },
+  Storage: {
+    AWSS3: {
+      bucket: 'for-fromme', //REQUIRED - Amazon S3 bucket
+      region: 'ap-northeast-2', //OPTIONAL - Amazon service region
+    },
+  },
+});
 
 class AddQScreen extends React.Component {
   state = {

@@ -41,13 +41,16 @@ function addAnswerCard(newAnswerCard) {
 function init() {
   return async (dispatch, getState) => {
     try {
-      let response = await fetch('', {
-        method: 'POST',
-        headers: {
-          Accept: 'application/json;charset=UTF-8',
-          'Content-Type': 'application/json;charset=UTF-8',
+      let response = await fetch(
+        'http://52.78.201.166:3210/FetchQuestionCard',
+        {
+          method: 'POST',
+          headers: {
+            Accept: 'application/json;charset=UTF-8',
+            'Content-Type': 'application/json;charset=UTF-8',
+          },
         },
-      });
+      );
       let json = await response.json();
       dispatch(setAskCard(json)); // render 1
     } catch (error) {
